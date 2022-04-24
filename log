@@ -149,3 +149,13 @@ do., 24 de abr. de 2022  1:21:08:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 f5abd8f
+do., 24 de abr. de 2022  1:22:36: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+treemap.c: In function 'insertTreeMap':
+treemap.c:74:5: error: expected ';' before '}' token
+     }
+     ^
+Compilation failed
+cca4dc9

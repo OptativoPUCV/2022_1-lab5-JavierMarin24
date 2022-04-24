@@ -65,7 +65,7 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
     if(aux == NULL)
     {
         aux=createTreeNode(key, value);
-        
+        tree->current = aux;
     }
 
 }

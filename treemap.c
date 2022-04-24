@@ -88,6 +88,7 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
         }*/
 TreeNode *aux = tree->root;
 TreeNode *nodo =NULL;
+if(searchTreeMap(tree, key)!= NULL)return;
 nodo = createTreeNode(key, value);
 while(aux != NULL)
 {

@@ -51,3 +51,17 @@ treemap.c:52:24: error: expected ';' before '{' token
 cc1.exe: all warnings being treated as errors
 Compilation failed
 9845303
+sá., 23 de abr. de 2022 22:48:09: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+treemap.c: In function 'insertTreeMap':
+treemap.c:63:16: error: 'return' with a value, in function returning void [-Werror]
+         return NULL;
+                ^~~~
+treemap.c:49:6: note: declared here
+ void insertTreeMap(TreeMap * tree, void* key, void * value) {
+      ^~~~~~~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+11dedee

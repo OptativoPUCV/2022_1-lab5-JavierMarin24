@@ -78,11 +78,11 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
     aux = tree->root;
     while(aux->left != NULL && aux->right !=NULL)
     {
-        if(key==aux)
+        if(key==aux->pair->key)
         {
             return aux->pair;
         }
-       if(key> aux)
+       if(key > aux->pair->key)
        {
           aux=aux->right;
        }

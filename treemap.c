@@ -90,9 +90,11 @@ TreeNode *aux = tree->root;
 TreeNode *nodo =NULL;
 if(searchTreeMap(tree, key)!= NULL)return;
 nodo = createTreeNode(key, value);
+tree->current=nodo;
 while(aux != NULL)
 {
-     nodo->parent = aux;
+     //nodo->parent = aux;
+     tree->current->parent=aux;
      if(tree->lower_than(key, aux->pair->key)==1)
      {
          aux= aux->left;
@@ -102,11 +104,12 @@ while(aux != NULL)
         aux= aux->right;
      }
 }
-if(nodo->parent == NULL) tree->root = nodo;
+/*if(nodo->parent == NULL) tree->root = nodo;
 else if(tree->lower_than(key, nodo->parent->pair->key)==1) nodo->parent->left=nodo;
-else nodo->parent->right=nodo;
-
-tree->current = nodo;
+else nodo->parent->right=nodo;*/
+if(tree->current->parent == NULL) tree->root = tree->current;
+else if(tree->lower_than(key, tree->current->parent->pair->key)==1) tree->current->parent->left=nodo;
+else tree->current->parent->right = tree->current;
 
 }
 

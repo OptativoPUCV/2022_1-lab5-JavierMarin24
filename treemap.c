@@ -72,7 +72,7 @@ else tree->current->parent->right = tree->current;
 TreeNode * minimum(TreeNode * x){
     TreeNode *aux;
     aux=x;
-    while(aux->left != NULL)
+    while(aux != NULL)
     {
         if (aux->left !=NULL)
         {

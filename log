@@ -8,3 +8,14 @@ sá., 23 de abr. de 2022 19:55:17:
  tests:  4|7
 total_score: 5/70
 8093b18
+sá., 23 de abr. de 2022 21:33:32: 
+ treemap.c | 18 ++++++++++++++++++
+ 1 file changed, 18 insertions(+)
+In file included from test.c:4:0:
+treemap.c: In function 'searchTreeMap':
+treemap.c:85:14: error: comparison of distinct pointer types lacks a cast [-Werror]
+        if(key> aux)
+              ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+307742d

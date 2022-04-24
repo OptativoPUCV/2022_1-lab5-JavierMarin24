@@ -159,3 +159,9 @@ treemap.c:74:5: error: expected ';' before '}' token
      ^
 Compilation failed
 cca4dc9
+do., 24 de abr. de 2022  1:22:44: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  11|6
+total_score: 15/70
+40fed4f

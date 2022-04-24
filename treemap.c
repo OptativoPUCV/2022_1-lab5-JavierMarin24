@@ -104,9 +104,10 @@ while(aux != NULL)
 if(nodo->parent == NULL) tree->root = nodo;
 else if(tree->lower_than(key, nodo->parent->pair->key)==1) nodo->parent->left=nodo;
 else nodo->parent->right=nodo;
+
+tree->current = nodo;
+
 }
-
-
 
 TreeNode * minimum(TreeNode * x){
     

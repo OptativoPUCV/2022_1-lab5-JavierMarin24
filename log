@@ -82,3 +82,8 @@ sá., 23 de abr. de 2022 23:18:47:
  1 file changed, 7 insertions(+), 2 deletions(-)
  tests:  0|0
 6ff7c85
+sá., 23 de abr. de 2022 23:19:20: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+b8e7203

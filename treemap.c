@@ -47,54 +47,13 @@ TreeMap * createTreeMap(int (*lower_than) (void* key1, void* key2)) {
 
 
 void insertTreeMap(TreeMap * tree, void* key, void * value) {
-    /*TreeNode *aux;
-    aux = tree->root;
-    if(tree->root==NULL)
-    {
-        aux=createTreeNode(key, value);
-        tree->root=aux;
-        tree->current=aux;
-    }
-    while(aux != NULL){
-        aux->parent=aux;
-        if(tree->lower_than(key, aux->pair->key) == 1)
-        {
-           aux=aux->left;
-        }
-        else if(tree->lower_than(aux->pair->key, key) == 1)
-        {
-           aux=aux->right;
-        }
-        else
-        {
-            return;
-        }   
-    }
-    //tree->current = aux;
-
-    if(aux == NULL)
-        {
-            aux=createTreeNode(key, value);
-            //aux->parent=tree->current;
-            if(tree->lower_than(key, aux->parent->pair->key) == 1)
-            {
-              aux->parent->left = aux;
-            }
-            else{
-                aux->parent->right= aux;
-            }
-            tree->current=aux;
-            return;
-        }*/
 TreeNode *aux = tree->root;
 TreeNode *nodo =NULL;
 if(searchTreeMap(tree, key)!= NULL)return;
 nodo = createTreeNode(key, value);
 tree->current=nodo;
-
 while(aux != NULL)
 {
-     //nodo->parent = aux;
      tree->current->parent=aux;
      if(tree->lower_than(key, aux->pair->key)==1)
      {
@@ -105,18 +64,25 @@ while(aux != NULL)
         aux= aux->right;
      }
 }
-/*if(nodo->parent == NULL) tree->root = nodo;
-else if(tree->lower_than(key, nodo->parent->pair->key)==1) nodo->parent->left=nodo;
-else nodo->parent->right=nodo;*/
 if(tree->current->parent == NULL) tree->root = tree->current;
 else if(tree->lower_than(key, tree->current->parent->pair->key)==1) tree->current->parent->left=nodo;
 else tree->current->parent->right = tree->current;
-
 }
 
 TreeNode * minimum(TreeNode * x){
-    
-    return NULL;
+    TreeNode *aux;
+    aux=x;
+    while(aux->left != NULL)
+    {
+        if (aux->left !=NULL)
+        {
+            aux=aux->left;
+        }
+        else{
+            return aux;
+        }
+    }
+    return x;
 }
 
 

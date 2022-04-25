@@ -463,3 +463,9 @@ lu., 25 de abr. de 2022  2:49:38:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 1b4285d
+lu., 25 de abr. de 2022  3:22:30: 
+ treemap.c | 10 +++++++---
+ 1 file changed, 7 insertions(+), 3 deletions(-)
+ tests:  29|0
+total_score: 70/70
+dcf0b87

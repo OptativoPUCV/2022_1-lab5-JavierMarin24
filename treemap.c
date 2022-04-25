@@ -146,7 +146,7 @@ else
 }
 if(node->left != NULL && node->right != NULL)
 {
-    TreeNode *aux;
+    TreeNode *aux = NULL;
     aux=node->right;
     aux = minimum(aux);
     node->pair->key = aux->pair->key;

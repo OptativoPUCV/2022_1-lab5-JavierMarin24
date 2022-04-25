@@ -108,12 +108,14 @@ else
         if(node == node->parent->left)
         {
             node->parent->left = node->right;
+            node->right->parent = node->parent;
             free(node);
         }
         else{
             if(node == node->parent->right)
             {
                 node->parent->right = node->right;
+                node->right->parent = node->parent;
                 free(node);
             }
            
@@ -126,6 +128,7 @@ else
             if(node == node->parent->left)
             {
                 node->parent->left = node->left;
+                node->left->parent = node->parent;
                 free(node);
             }            
             else
@@ -133,6 +136,7 @@ else
                 if(node == node->parent->right)
                 {
                     node->parent->right = node->left;
+                    node->left->parent = node->parent;
                     free(node);
                 }
             }

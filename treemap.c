@@ -146,11 +146,11 @@ else
 }
 if(node->left != NULL && node->right == NULL)
 {
-    TreeNode *aux;
-    aux=node->left;
-    aux = minium(aux);
-    node=aux;
-    removeNode(tree, aux) ;
+    TreeNode *aux2;
+    aux2=node->left;
+    aux2 = minium(aux2);
+    node=aux2;
+    removeNode(tree, aux2) ;
     /*while(aux != NULL)
     {
         if(aux->right != NULL)

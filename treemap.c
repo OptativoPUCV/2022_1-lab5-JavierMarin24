@@ -146,11 +146,38 @@ else
 }
 if(node->left != NULL && node->right == NULL)
 {
-   TreeNode *aux ;
-   aux = node->right;
-   aux = minium(aux);
-   node=aux;
-   removeNode(tree, aux) ;
+    TreeNode *aux;
+    aux=node->left;
+    aux = minium(aux);
+    node=aux;
+    removeNode(tree, aux) ;
+    /*while(aux != NULL)
+    {
+        if(aux->right != NULL)
+        {
+            aux=aux->right;
+        }
+        else
+        {
+            break;
+        }
+    }
+    node=aux;
+    if(aux->right != NULL)
+    {
+        aux->parent->right=aux->right;
+    }
+    else 
+    {
+        if(aux->left != NULL)
+        {
+        aux->parent->right=aux->left;
+        }
+        else{
+            aux->parent->right = NULL;
+        }
+    }
+    removeNode(tree, aux) ;*/
 }
 }
 

@@ -144,7 +144,7 @@ else
 
     }   
 }
-if(node->left != NULL && node->right == NULL)
+if(node->left != NULL && node->right != NULL)
 {
     TreeNode *aux;
     aux=node->right;

@@ -284,3 +284,17 @@ do., 24 de abr. de 2022 23:06:19:
  1 file changed, 1 insertion(+), 3 deletions(-)
  tests:  0|0
 1462460
+do., 24 de abr. de 2022 23:08:38: 
+ treemap.c | 30 +++---------------------------
+ 1 file changed, 3 insertions(+), 27 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function 'removeNode':
+treemap.c:151:10: error: implicit declaration of function 'minium' [-Werror=implicit-function-declaration]
+    aux = minium(aux);
+          ^~~~~~
+treemap.c:151:8: error: assignment makes pointer from integer without a cast [-Werror=int-conversion]
+    aux = minium(aux);
+        ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+f52a9b5

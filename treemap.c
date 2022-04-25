@@ -149,7 +149,8 @@ if(node->left != NULL && node->right == NULL)
     TreeNode *aux;
     aux=node->left;
     aux = minimum(aux);
-    node=aux;
+    node->pair->key = aux->pair->key;
+    node->pair->value= aux->pair->value;
     removeNode(tree, aux);
     /*while(aux != NULL)
     {

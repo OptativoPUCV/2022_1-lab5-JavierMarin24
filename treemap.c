@@ -163,7 +163,8 @@ if(node->left != NULL && node->right != NULL)
             break;
         }
     }
-    node=aux;
+    node->pair->key = aux->pair->key;
+    node->pair->value= aux->pair->value;
     if(aux->right != NULL)
     {
         aux->parent->right=aux->right;

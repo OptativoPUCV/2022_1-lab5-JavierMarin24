@@ -208,5 +208,27 @@ Pair * firstTreeMap(TreeMap * tree) {
 
 Pair * nextTreeMap(TreeMap * tree) {
 
+    TreeNode* aux;
+    TreeNode* comparador;
+    if(tree->current->right != NULL)
+    {
+        aux=minimum(aux);
+        aux = minimum(aux);
+        return aux;
+    }
+    aux=tree->current;
+    comparador=aux->parent;
+    while(1){
+        if(tree->lower_than(comparador->pair->key, aux->pair->key) == 1)
+        {
+            comparador=comparador->parent;
+        }
+        else
+        {
+            return comparador->pair;
+        }
+    }
+    
+
     return NULL;
 }

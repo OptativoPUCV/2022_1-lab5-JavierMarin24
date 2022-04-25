@@ -298,3 +298,17 @@ treemap.c:151:8: error: assignment makes pointer from integer without a cast [-W
 cc1.exe: all warnings being treated as errors
 Compilation failed
 f52a9b5
+do., 24 de abr. de 2022 23:14:04: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+treemap.c: In function 'removeNode':
+treemap.c:151:10: error: implicit declaration of function 'minium' [-Werror=implicit-function-declaration]
+    aux = minium(aux);
+          ^~~~~~
+treemap.c:151:8: error: assignment makes pointer from integer without a cast [-Werror=int-conversion]
+    aux = minium(aux);
+        ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+fe2f2f0

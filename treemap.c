@@ -196,7 +196,9 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
 }
 
 
-Pair * upperBound(TreeMap * tree, void* key) {
+Pair * upperBound(TreeMap * tree, void* key) 
+{
+  
     return NULL;
 }
 
@@ -212,23 +214,30 @@ Pair * nextTreeMap(TreeMap * tree) {
     TreeNode* comparador;
     if(tree->current->right != NULL)
     { 
-        aux=tree->current->right;
-        aux=minimum(aux);
-        return aux;
+        aux = tree->current->right;
+        aux = minimum(aux);
+        tree->current = aux;
+        return aux->pair;
     }
-    aux=tree->current;
-    comparador=aux->parent;
-    while(1){
-        if(tree->lower_than(comparador->pair->key, aux->pair->key) == 1)
-        {
-            comparador=comparador->parent;
-        }
-        else
-        {
-            return comparador->pair;
-        }
+    else
+    {
+      comparador = tree->current; 
+      while(1)
+      {
+          if(tree->lower_than(tree->current->pair->key, comparador->pair->key) == 1)
+          {
+            tree->current = comparador;
+            return tree->current->pair;
+          }
+          else
+          {
+            comparador = comparador->parent;
+          }
+          if(comparador == NULL)
+          {
+            return NULL;
+          }
+      }
     }
-    
-
     return NULL;
 }

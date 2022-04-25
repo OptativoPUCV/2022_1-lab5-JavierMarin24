@@ -175,7 +175,7 @@ if(node->left != NULL && node->right == NULL)
             aux->parent->right = NULL;
         }
     }
-    free(aux);
+    free(tree->current);
     
 }
 }

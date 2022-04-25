@@ -159,7 +159,6 @@ if(node->left != NULL && node->right == NULL)
             break;
         }
     }
-    tree->current = aux;
     node=aux;
     if(aux->right != NULL)
     {
@@ -175,8 +174,7 @@ if(node->left != NULL && node->right == NULL)
             aux->parent->right = NULL;
         }
     }
-    free(tree->current);
-    
+    removeNode(tree, aux) ;
 }
 }
 

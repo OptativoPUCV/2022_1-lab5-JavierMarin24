@@ -211,9 +211,9 @@ Pair * nextTreeMap(TreeMap * tree) {
     TreeNode* aux;
     TreeNode* comparador;
     if(tree->current->right != NULL)
-    {
+    { 
+        aux=tree->current->right;
         aux=minimum(aux);
-        aux = minimum(aux);
         return aux;
     }
     aux=tree->current;
